@@ -32,7 +32,8 @@ function downloadFiles(page = 1): void {
         }
       };
 
-      const fileName = `${fileData.id}.${fileData.filetype}`;
+      const { timestamp, id, filetype } = fileData;
+      const fileName = `${timestamp}-${id}.${filetype}`;
       const file = fs.createWriteStream(`downloads/${fileName}`);
       https.get(options, (response) => {
         const stream = response.pipe(file);
@@ -41,7 +42,7 @@ function downloadFiles(page = 1): void {
         });
       });
     });
-    
+
     if (page < pages) {
       downloadFiles(page + 1);
     }

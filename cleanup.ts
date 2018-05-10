@@ -41,8 +41,7 @@ function downloadFiles(page = 1): void {
         });
       });
     });
-
-
+    
     if (page < pages) {
       downloadFiles(page + 1);
     }

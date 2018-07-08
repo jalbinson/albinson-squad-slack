@@ -19,7 +19,7 @@ export function processFiles(fn: (file) => void): void {
       }
 
       files.forEach((file) => {
-        fn(file)
+        fn(file);
       });
 
       if (page < pages) {

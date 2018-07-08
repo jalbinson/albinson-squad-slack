@@ -2,7 +2,8 @@
   "name": "albinson-squad-slack",
   "version": "0.0.1",
   "scripts": {
-    "clean-up": "ts-node cleanup.ts"
+    "download": "ts-node download.ts",
+    "delete": "ts-node delete.ts"
   },
   "dependencies": {
     "@slack/client": "^4.2.0",

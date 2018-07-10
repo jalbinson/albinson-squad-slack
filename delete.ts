@@ -5,7 +5,7 @@ const token = process.env.SLACK_TOKEN;
 const web = new WebClient(token);
 
 processFiles(({ id }) => {
-  web.files.delete({ file: id}).then(() => {
+  web.files.delete({ file: id }).then(() => {
     console.log(`deleted: ${id}`);
   });
 });

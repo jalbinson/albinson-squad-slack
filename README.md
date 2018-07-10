@@ -1,5 +1,9 @@
 # albinson-squad-slack
 
 ```
-npm run clean-up
+npm run download
+```
+
+```
+npm run delete
 ```

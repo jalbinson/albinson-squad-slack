@@ -8,6 +8,7 @@ if (!fs.existsSync('downloads')) {
   fs.mkdirSync('downloads');
 }
 
+// hello world?
 processFiles(({ timestamp, id, filetype, url_private }) => {
   const { host, path } = url.parse(url_private);
   const options = {
